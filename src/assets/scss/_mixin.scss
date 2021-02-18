@@ -1,0 +1,72 @@
+$color_background: #ECECEC;
+$color_deepFont: #000000;
+$color_deepGrayFont: #707070;
+$color_lightGrayFont: #6B6B6B;
+$color_white: #FFFFFF;
+$color_black: #000000;
+
+$transition_ease: cubic-bezier(.5, .2, .1, 1.14);
+$transition_easeText: cubic-bezier(.77, 0, .175, 1);
+$transition_easeInSine: cubic-bezier(0.12, 0, 0.39, 0);
+$transition_easeInQuart: cubic-bezier(0.5, 0, 0.75, 0);
+$transition_easeOutSine: cubic-bezier(0.61, 1, 0.88, 1);
+$transition_easeOutQuart: cubic-bezier(0.25, 1, 0.5, 1);
+
+// -----google font-----
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;600;700&display=swap");
+$font_regular: 300;
+$font_medium: 500;
+$font_semiBold: 600;
+$font_bold: 700;
+
+@mixin poa_center {
+  position: absolute;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+@mixin fix_center {
+  position: fixed;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+@mixin page_base {
+  padding: 65px;
+  margin: 0;
+  width: 100vw;
+  min-height: 100vh;
+  min-height: calc(var(--vh, 1vh) * 100);
+  overflow-x: hidden;
+}
+
+@mixin flex($jc:center, $ai:center, $fd:row) {
+  display: flex;
+  justify-content: $jc;
+  align-items: $ai;
+  flex-direction: $fd;
+}
+
+@mixin font($fz, $lh, $fw:$font_semiBold) {
+  font-size: $fz;
+  line-height: $lh;
+  font-weight: $fw;
+  letter-spacing: .5px;
+}
+
+@mixin bg_set($size:contain, $pos_lr:center, $pos_tb:center, $repeat:no-repeat) {
+  background-size: $size;
+  background-position: $pos_lr $pos_tb;
+  background-repeat: $repeat;
+}
+
+@mixin img_set($obj_fit:contain, $pos_lr:center, $pos_tb:center) {
+  object-fit: $obj_fit;
+  object-position: center center;
+}
