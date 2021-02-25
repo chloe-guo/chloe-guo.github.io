@@ -1,7 +1,9 @@
 # chloe-guo
 使用 vue cli 建立的作品集專案，使用 sass。
 
-## Project setup
+## 執行專案
+
+### Project setup
 ```
 npm install
 ```
